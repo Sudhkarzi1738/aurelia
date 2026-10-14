@@ -1,15 +1,16 @@
-import { type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  return updateSession(request);
+  try {
+    return await updateSession(request);
+  } catch {
+    return NextResponse.next({ request });
+  }
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all paths except static assets and images.
-     */
     "/((?!_next/static|_next/image|favicon.ico|assets/|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
