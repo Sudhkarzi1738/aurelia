@@ -362,3 +362,130 @@ button.cart-btn{background:none;border:0;font:inherit;padding:0;color:var(--gold
   .checkout-summary{position:static}
   .checkout-form{grid-template-columns:1fr}
 }
+/* ===== FIX: horizontal page shift on mobile ===== */
+html {
+  overflow-x: clip;
+  max-width: 100%;
+}
+body {
+  overflow-x: clip;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Marquee: keep animation, never widen the page */
+.marquee {
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+.marquee-track {
+  width: max-content;
+  will-change: transform;
+}
+
+/* Nav row must not force horizontal scroll */
+nav {
+  max-width: 100%;
+  min-width: 0;
+}
+.logo {
+  min-width: 0;
+}
+.nav-icons {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .announce {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.06em !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+    padding: 0.4rem 0.75rem !important;
+  }
+
+  .logo {
+    font-size: 1.1rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .auth-btn {
+    display: none !important;
+  }
+
+  .nav-icons {
+    gap: 0.6rem !important;
+  }
+
+  .eyebrow {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.12em !important;
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+  }
+  .eyebrow::before {
+    width: 20px !important;
+  }
+
+  .hero {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    padding: 1rem 5vw 1.5rem !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .hero-text {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+  }
+  .hero h1 {
+    font-size: clamp(1.7rem, 7.5vw, 2.4rem) !important;
+    line-height: 1.15 !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+  .hero p {
+    max-width: 100% !important;
+    font-size: 0.9rem !important;
+  }
+  .hero-img {
+    max-width: 100% !important;
+    height: 40vh !important;
+    min-height: 220px !important;
+  }
+
+  /* Stack hero buttons — remove side-by-side overflow */
+  .hero-text .btn {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.7rem !important;
+    max-width: 100% !important;
+  }
+
+  .card,
+  .card-body,
+  .card-name {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  section,
+  .pdp,
+  .checkout-page,
+  .content-page {
+    max-width: 100% !important;
+    overflow-x: clip !important;
+  }
+}
