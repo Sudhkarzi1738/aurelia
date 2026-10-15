@@ -60,4 +60,4 @@ export const testimonials = `<!-- TESTIMONIALS -->
   </div>
 </section>`;
 
-export const footer = "";
+export const footer = ""; // SiteFooter component is used instead
