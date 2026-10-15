@@ -1,4 +1,63 @@
-export const hero = "<header class=\"hero\">\n  <div class=\"hero-text\">\n    <div class=\"eyebrow\">Maison de Haute Joaillerie \u00b7 Est. 1987</div>\n    <h1>Where gold becomes <em>poetry</em>, worn on skin</h1>\n    <p>Hand-finished heirlooms in 22K gold, brilliant diamonds and sacred temple craftsmanship \u2014 each piece composed for the moments that become memory.</p>\n    <a href=\"#collections\" class=\"btn btn-solid\">Explore Collections</a>\n    <a href=\"#bridal\" class=\"btn\" style=\"margin-left:.8rem\">Bridal Atelier</a>\n  </div>\n  <div class=\"hero-img\">\n    <img src=\"/assets/necklace-kundan.webp\" alt=\"Kundan bridal necklace\">\n    <div class=\"hero-badge\">The Nandini Collection \u00b7 22K Gold</div>\n  </div>\n</header>\n\n<!-- MARQUEE -->\n<div class=\"marquee\">\n  <div class=\"marquee-track\">\n    <span>22K Gold <i>\u2726</i> Hand-set Kundan <i>\u2726</i> Certified Diamonds <i>\u2726</i> Temple Jewellery <i>\u2726</i> Basra Pearls <i>\u2726</i> Bridal Atelier <i>\u2726</i></span>\n    <span>22K Gold <i>\u2726</i> Hand-set Kundan <i>\u2726</i> Certified Diamonds <i>\u2726</i> Temple Jewellery <i>\u2726</i> Basra Pearls <i>\u2726</i> Bridal Atelier <i>\u2726</i></span>\n  </div>\n</div>";
-export const editorial = "<!-- EDITORIAL -->\n<div class=\"editorial\" id=\"necklaces\">\n  <div class=\"ed-img\"><img src=\"/assets/necklace-choker.webp\" alt=\"Diamond choker\"></div>\n  <div class=\"ed-text\">\n    <div class=\"eyebrow\">The High Jewellery Edit</div>\n    <h2>The Maharani Choker \u2014 18K gold, sapphire &amp; 34 carats of light</h2>\n    <p>Nine weeks. Forty-one artisans. One choker worthy of a dynasty. Our master setters compose each sapphire and rose-cut diamond by candlelight, the way it has been done in Jaipur for three centuries.</p>\n    <div class=\"ed-stats\">\n      <div><h3>1987</h3><p>Maison founded</p></div>\n      <div><h3>120+</h3><p>Master artisans</p></div>\n      <div><h3>41</h3><p>Days per choker</p></div>\n    </div>\n    <div><a class=\"btn\" href=\"#collections\">Discover High Jewellery</a></div>\n  </div>\n</div>";
-export const testimonials = "<!-- TESTIMONIALS -->\n<section>\n  <div class=\"sec-head\">\n    <div class=\"eyebrow\">Whispered Admiration</div>\n    <h2>Words From Our Patrons</h2>\n  </div>\n  <div class=\"testi-grid\">\n    <div class=\"testi\">\n      <div class=\"stars\">\u2605\u2605\u2605\u2605\u2605</div>\n      <p>The kundan bridal set made my daughter's wedding feel like a royal durbar. The craftsmanship is beyond anything we have seen in three generations of jewellers in our family.</p>\n      <h4>Meera Raje</h4><small>Mumbai \u00b7 Bridal Atelier</small>\n    </div>\n    <div class=\"testi\">\n      <div class=\"stars\">\u2605\u2605\u2605\u2605\u2605</div>\n      <p>My eternity band arrived in packaging worthy of the piece itself. Every facet catches light like it was cut yesterday. Aurelia is now my only jeweller.</p>\n      <h4>Isabelle Moreau</h4><small>Paris \u00b7 High Jewellery</small>\n    </div>\n    <div class=\"testi\">\n      <div class=\"stars\">\u2605\u2605\u2605\u2605\u2605</div>\n      <p>From the temple choker to the pearl drops, each piece carries a soul. Their artisans even adjusted my haath phool to fit perfectly within a week.</p>\n      <h4>Ananya Iyer</h4><small>Chennai \u00b7 Temple Collection</small>\n    </div>\n  </div>\n</section>";
-export const footer = "<footer>\n  <div class=\"foot-grid\">\n    <div>\n      <a href=\"#\" class=\"logo\" style=\"font-size:1.4rem\">AURE<span>LIA</span></a>\n      <p style=\"margin-top:1.2rem\">Maison de haute joaillerie crafting heirlooms in 22K gold, kundan, diamonds and pearls since 1987. Jaipur \u00b7 Mumbai \u00b7 Paris.</p>\n    </div>\n    <div>\n      <h4>Collections</h4>\n      <a href=\"#necklaces\">Necklaces</a><a href=\"#bracelets\">Bracelets</a><a href=\"#rings\">Rings</a><a href=\"#earrings\">Earrings</a><a href=\"#bridal\">Bridal</a>\n    </div>\n    <div>\n      <h4>Maison</h4>\n      <a href=\"#\">Our Story</a><a href=\"#\">Artisans</a><a href=\"#\">Ateliers</a><a href=\"#\">Journal</a>\n    </div>\n    <div>\n      <h4>Concierge</h4>\n      <a href=\"#\">Book a Viewing</a><a href=\"#\">Ring Sizing</a><a href=\"#\">Care & Repair</a><a href=\"#\">Contact</a>\n    </div>\n  </div>\n  <div class=\"foot-bottom\">\n    <span>\u00a9 2026 Aurelia Haute Joaillerie. All rights reserved.</span>\n    <span>Instagram \u00b7 Pinterest \u00b7 WhatsApp Concierge</span>\n  </div>\n</footer>";
+export const hero = `<header class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">Maison de Haute Joaillerie · Est. 1987</div>
+    <h1>Where gold becomes <em>poetry</em>, worn on skin</h1>
+    <p>Hand-finished heirlooms across fine gold, silver, kundan and temple craft — each piece composed for the moments that become memory. Materials vary by design; see each product for details.</p>
+    <a href="#collections" class="btn btn-solid">Explore Collections</a>
+    <a href="#shop-by" class="btn hero-btn-secondary">Shop by Category</a>
+  </div>
+  <div class="hero-img">
+    <img src="/assets/necklace-kundan.webp" alt="Kundan bridal necklace" width="800" height="1000" fetchpriority="high">
+    <div class="hero-badge">The Nandini Collection</div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Fine Gold <i>✦</i> Hand-set Kundan <i>✦</i> Temple Jewellery <i>✦</i> Pearls <i>✦</i> Bridal Atelier <i>✦</i></span>
+    <span>Fine Gold <i>✦</i> Hand-set Kundan <i>✦</i> Temple Jewellery <i>✦</i> Pearls <i>✦</i> Bridal Atelier <i>✦</i></span>
+  </div>
+</div>`;
+
+export const editorial = `<!-- EDITORIAL -->
+<div class="editorial" id="necklaces">
+  <div class="ed-img"><img src="/assets/necklace-choker.webp" alt="Diamond and sapphire choker" width="800" height="1000" loading="lazy"></div>
+  <div class="ed-text">
+    <div class="eyebrow">The High Jewellery Edit</div>
+    <h2>The Maharani Choker — 18K gold, sapphire &amp; diamonds</h2>
+    <p>Forty-one days. Master artisans. One choker composed in the atelier tradition. Our setters place each sapphire and rose-cut diamond with care — the way high jewellery has been made in Jaipur for generations.</p>
+    <div class="ed-stats">
+      <div><h3>1987</h3><p>Maison founded</p></div>
+      <div><h3>120+</h3><p>Master artisans</p></div>
+      <div><h3>41</h3><p>Days per choker</p></div>
+    </div>
+    <div><a class="btn" href="#collections">Discover High Jewellery</a></div>
+  </div>
+</div>`;
+
+export const testimonials = `<!-- TESTIMONIALS -->
+<section>
+  <div class="sec-head">
+    <div class="eyebrow">Whispered Admiration</div>
+    <h2>Words From Our Patrons</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p>The kundan bridal set made my daughter's wedding feel like a royal durbar. The craftsmanship is beyond anything we have seen in three generations of jewellers in our family.</p>
+      <h4>Meera Raje</h4><small>Mumbai · Bridal Atelier</small>
+    </div>
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p>My eternity band arrived in packaging worthy of the piece itself. Every facet catches light like it was cut yesterday. Aurelia is now my only jeweller.</p>
+      <h4>Isabelle Moreau</h4><small>Paris · High Jewellery</small>
+    </div>
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p>From the temple choker to the pearl drops, each piece carries a soul. Their artisans even adjusted my haath phool to fit perfectly within a week.</p>
+      <h4>Ananya Iyer</h4><small>Chennai · Temple Collection</small>
+    </div>
+  </div>
+</section>`;
+
+export const footer = "";
