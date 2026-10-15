@@ -8,20 +8,21 @@ export function ProductGrid({ items }: { items: Product[] }) {
   return (
     <div className="grid">
       {items.map((p, i) => (
-        <div className="card" key={p.id} style={{ animationDelay: `${(i % 8) * 0.06}s` }}>
+        <article className="card" key={p.id} style={{ animationDelay: `${(i % 8) * 0.06}s` }}>
           <div className="card-img">
-            <Link href={`/product/${p.id}`}>
+            <Link href={`/product/${p.id}`} aria-label={p.name}>
               <img src={p.image} alt={p.name} loading="lazy" />
             </Link>
             <div className="card-tag">{p.tag}</div>
             <div className="card-actions">
-              <button className="icon-btn" title="Quick view" type="button" onClick={() => openLightbox(p.image)}>
+              <button className="icon-btn" title="Quick view" type="button" aria-label="Quick view" onClick={() => openLightbox(p.image)}>
                 👁
               </button>
               <button
                 className="icon-btn"
                 title="Add to wishlist"
                 type="button"
+                aria-label="Wishlist"
                 onClick={() => toggleWishlist(p.id, p.name)}
               >
                 {wishlist.includes(p.id) ? "♥" : "♡"}
@@ -34,13 +35,14 @@ export function ProductGrid({ items }: { items: Product[] }) {
               {p.name}
             </Link>
             <div className="card-price">
-              <b>{inr(p.priceInr)}</b> &nbsp;·&nbsp; incl. taxes
+              <b>{inr(p.priceInr)}</b>
+              <span className="card-tax"> · incl. taxes</span>
             </div>
             <button className="btn add-btn" type="button" onClick={() => addToCart(p.id)}>
               Add to Bag
             </button>
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );
